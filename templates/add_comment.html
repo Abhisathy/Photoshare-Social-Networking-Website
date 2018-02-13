@@ -1,0 +1,15 @@
+<!-- This page should allow a user to enter a comment for a photo
+    Ideally this page will have one photo and a text bar with a submit button under it-->
+<!DOCTYPE html>
+<html>
+   <body>
+
+      <form action = "http://127.0.0.1:5000/search_tags" method = "post">
+         <input type="image" value="{{ photo[0] }}">
+         <p>Enter Comment:</p>
+         <p><input type = "text" name = "comment" /></p>
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+
+   </body>
+</html>

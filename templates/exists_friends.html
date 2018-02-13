@@ -1,0 +1,28 @@
+<!-- Here with display whether the friend exists or not
+NEED TO DO:
+If the friend does exist, we have to ask the user if he wants to add this friend (Here tried to implement as Y/N)
+If the user says yes, we how to somehow return his email ID to add_friend to add their details into the Friendship table -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADDED</title>
+</head>
+<body>
+{% if name != 'none' %}
+    <p>{{ name }} exists</p>
+<!--<p>Would you like to <a href='/add_friend'>add as a friend?</a></p>  -->
+
+
+
+<form method="post"><label for="yesno">Would you like to add as a friend [Y/N]:</label>
+        <input type="yesno" name="yesno" /><br />
+        <input type="submit" value="submit"/></form>
+
+  <!--  </form>    -->
+{% else %}
+<p>Doesn't exist :(</p>
+{% endif %}
+</body>
+</html>

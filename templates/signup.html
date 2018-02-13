@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create an Account</title>
+</head>
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+<body>
+
+<h2>Signup For Photoshare</h2>
+
+<form action="/register" style="border:1px solid #ccc" method="post">
+    {% if supress %}
+        <h1> Email already in use! Use another one or <a href="/">login</a></h1>
+    {% endif %}
+  <div class="container">
+
+    <label><b>First Name</b></label>
+    <input type="text" class="form-control" placeholder="First Name" name="firstname"><br>
+
+    <label><b>Last Name</b></label>
+    <input type="text" class="form-control" placeholder="Last Name" name="lastname"><br>
+
+    <label><b>Birthday</b></label>
+    <input type="date" class="form-control" placeholder="date of birth" name="birthday"><br><br>
+
+    <label><b>Hometown/City</b></label>
+    <input type="text" class="form-control" placeholder="Hometown" name="hometown"><br>
+
+    <label><b>Gender</b></label><br>
+    <input type="radio" name="gender" value="male" checked> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="other"> Other<br><br>
+
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <div class="clearfix">
+      <button style="horiz-align: center" type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
